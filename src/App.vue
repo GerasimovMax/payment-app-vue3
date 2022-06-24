@@ -1,12 +1,11 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" class="mx-auto" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite + Tailwind" />
+  <router-view v-slot="{ Component }">
+    <!-- <transition name="route" mode="out-in"> -->
+    <component :is="Component"></component>
+    <!-- </transition> -->
+  </router-view>
 </template>
 
 <style>
@@ -15,7 +14,20 @@ import HelloWorld from './components/HelloWorld.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
+/* .route-enter-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+.route-enter-active {
+  transition: all 0.3s ease-in-out;
+}
+.route-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.route-leave-active {
+  transition: all 0.3s ease-in-out;
+} */
 </style>

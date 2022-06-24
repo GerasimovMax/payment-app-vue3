@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply rounded-full border-none bg-gray-200 px-9 py-4 font-bold  text-black;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white;
+  }
+
+  .btn-icon {
+    @apply p-2;
+  }
+}
